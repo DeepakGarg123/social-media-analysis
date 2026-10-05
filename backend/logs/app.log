@@ -1,0 +1,58 @@
+2026-10-02 19:11:44,114 - INFO - Logger test successful
+2026-10-02 19:27:57,166 - INFO - Logger imported successfully
+2026-10-02 19:34:18,216 - INFO - Instagram post scraping started
+2026-10-02 19:35:08,350 - INFO - Instagram posts collected: 5
+2026-10-02 19:35:08,350 - INFO - Instagram profile scraping started for: karan_panesar123
+2026-10-02 19:35:24,325 - INFO - Instagram profiles collected: 1
+2026-10-02 19:43:41,540 - INFO - Analytics processing started for: karan_panesar123
+2026-10-02 19:43:41,561 - INFO - Analytics processing completed for: karan_panesar123
+2026-10-02 20:01:02,471 - INFO - Analytics processing started for: karan_panesar123
+2026-10-02 20:01:02,481 - INFO - Analytics processing completed for: karan_panesar123
+2026-10-02 20:35:37,336 - INFO - Instagram post scraping started
+2026-10-02 20:36:05,359 - INFO - Instagram posts collected: 5
+2026-10-02 20:36:05,359 - INFO - Instagram profile scraping started for: karan_panesar123
+2026-10-02 20:39:00,324 - INFO - Instagram post scraping started
+2026-10-02 20:39:28,066 - INFO - Instagram posts collected: 5
+2026-10-02 20:39:28,066 - INFO - Instagram profile scraping started for: karan_panesar123
+2026-10-02 20:39:39,585 - INFO - Follower snapshot saved for karan_panesar123: 229
+2026-10-02 20:39:39,587 - INFO - Instagram profiles collected: 1
+2026-10-02 20:45:49,612 - INFO - Instagram post scraping started
+2026-10-02 20:47:44,164 - INFO - Instagram post scraping started
+2026-10-02 20:48:04,077 - INFO - Instagram posts collected: 5
+2026-10-02 20:48:04,081 - INFO - Instagram profile scraping started for: karan_panesar123
+2026-10-02 20:48:22,956 - INFO - Follower snapshot saved for karan_panesar123: 229
+2026-10-02 20:48:22,959 - INFO - Instagram profiles collected: 1
+2026-10-02 20:57:12,882 - INFO - Analytics processing started for: karan_panesar123
+2026-10-02 20:57:12,891 - INFO - Analytics processing completed for: karan_panesar123
+2026-10-02 21:02:54,057 - INFO - Analytics processing started for: karan_panesar123
+2026-10-02 21:02:54,061 - INFO - Analytics processing completed for: karan_panesar123
+2026-10-03 16:58:23,292 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-03 16:58:35,642 - INFO - Profile karanaujla has 250 posts. Analysis limit set to 50.
+2026-10-03 16:58:35,642 - INFO - Instagram post scraping started
+2026-10-03 16:59:07,320 - INFO - Instagram posts collected: 50
+2026-10-03 16:59:07,320 - INFO - Follower snapshot saved for karanaujla: 15242790
+2026-10-03 16:59:07,323 - INFO - Instagram profiles collected: 1
+2026-10-03 17:01:48,455 - INFO - Analytics processing started for: karanaujla
+2026-10-03 17:01:48,488 - INFO - Analytics processing completed for: karanaujla
+2026-10-03 17:11:51,975 - INFO - Analytics processing started for: karanaujla
+2026-10-03 17:11:51,997 - INFO - Analytics processing completed for: karanaujla
+2026-10-03 17:44:06,389 - INFO - Analytics processing started for: karanaujla
+2026-10-03 17:44:06,411 - INFO - Analytics processing completed for: karanaujla
+2026-10-03 18:29:39,712 - INFO - Analytics processing started for: karanaujla
+2026-10-03 18:29:39,733 - INFO - Analytics processing completed for: karanaujla
+2026-10-03 18:37:55,842 - INFO - Analytics processing started for: karanaujla
+2026-10-03 18:37:55,862 - INFO - Analytics processing completed for: karanaujla
+2026-10-03 18:41:21,654 - INFO - Analytics processing started for: karanaujla
+2026-10-03 18:41:21,676 - INFO - Analytics processing completed for: karanaujla
+2026-10-04 16:36:53,917 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-04 16:37:10,743 - INFO - Profile karanaujla has 251 posts. Analysis limit set to 50.
+2026-10-04 16:37:10,744 - INFO - Instagram post scraping started
+2026-10-04 16:37:39,078 - INFO - Instagram posts collected: 50
+2026-10-04 16:37:39,106 - INFO - Follower snapshot saved for karanaujla: 15253006
+2026-10-04 16:37:39,110 - INFO - Instagram profiles collected: 1
+2026-10-04 16:45:39,296 - INFO - Analytics processing started for: karanaujla
+2026-10-04 16:45:39,330 - INFO - Analytics processing completed for: karanaujla
+2026-10-04 16:56:21,683 - INFO - Analytics processing started for: karanaujla
+2026-10-04 16:56:51,782 - INFO - Analytics processing completed for: karanaujla
+2026-10-04 17:04:45,338 - INFO - Analytics processing started for: karanaujla
+2026-10-04 17:04:45,353 - INFO - Analytics processing completed for: karanaujla

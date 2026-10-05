@@ -1,11 +1,7 @@
 import json
-
 from pathlib import Path
-
 from datetime import datetime
-
 from backend.logs.logs import logger
-
 from collections import defaultdict
 
 
@@ -17,7 +13,8 @@ report = {
     "content_analysis": [],
     "video_analysis": [],
     "growth": {},
-    "suggestions": []
+    "suggestions": [],
+    "llm_insights": []
 }
 
 
@@ -48,6 +45,8 @@ logger.info(
     f"Analytics processing started for: {profile['username']}"
 )
 
+
+# -------------------- Profile Information --------------------
 
 report["profile"] = {
     "username": profile["username"],
@@ -82,17 +81,10 @@ user_history = [
 
 # -------------------- Follower Growth --------------------
 
-username = profile["username"]
-
-user_history = [
-    item
-    for item in profile_history
-    if item.get("username") == username
-]
-
 user_history.sort(
     key=lambda item: item.get("date")
 )
+
 
 print("\nFollower Growth History:")
 
@@ -148,7 +140,9 @@ def calculate_growth(history, start_month=None, end_month=None):
     growth = end_followers - start_followers
 
     if start_followers > 0:
-        growth_percentage = (growth / start_followers) * 100
+        growth_percentage = (
+            growth / start_followers
+        ) * 100
     else:
         growth_percentage = 0
 
@@ -184,6 +178,7 @@ def calculate_growth(history, start_month=None, end_month=None):
 # Show growth across the complete available history.
 
 report["growth"] = calculate_growth(user_history)
+
 
 print("\nOverall follower growth:")
 
@@ -226,9 +221,7 @@ else:
     )
 
 
-# Optional month filter.
-# Set these values later from the frontend/user input.
-# Keep them as None when no filter is requested.
+# -------------------- Optional Month Filter --------------------
 
 start_month = None
 end_month = None
@@ -348,7 +341,11 @@ average_likes = (
 
 # -------------------- Engagement Metrics --------------------
 
-total_interactions = total_likes + total_comments
+total_interactions = (
+    total_likes +
+    total_comments
+)
+
 
 average_interactions = (
     total_interactions / len(data)
@@ -606,7 +603,6 @@ for post in data:
     if likes is None or likes < 0:
         continue
 
-
     timestamp = post.get("timestamp")
 
     if timestamp:
@@ -617,13 +613,11 @@ for post in data:
 
         hour = date.hour
 
-
         print(
             f"Post: {post.get('shortCode')} | "
             f"Hour: {hour} | "
             f"Likes: {likes}"
         )
-
 
         hourly_likes[hour].append(likes)
 
@@ -671,18 +665,12 @@ for post in data:
     if likes is None or likes < 0:
         continue
 
-
     product_type = post.get("productType")
 
-
     if product_type:
-
         content_type = product_type
-
     else:
-
         content_type = "unknown"
-
 
     content_likes[content_type].append(likes)
 
@@ -698,7 +686,6 @@ for content_type, likes in content_likes.items():
         "_",
         " "
     ).title()
-
 
     print(
         f"{readable_type} -> "
@@ -756,19 +743,15 @@ for post in data:
 
     comments = post.get("commentsCount", 0)
 
-
     if likes is None or likes < 0:
         continue
-
 
     if views is None or views <= 0:
         continue
 
-
     interaction_rate = (
         (likes + comments) / views
     ) * 100
-
 
     video_engagement.append(
         (interaction_rate, post)
@@ -804,6 +787,217 @@ for interaction_rate, post in video_engagement:
 
 
 report["video_analysis"] = video_analysis
+
+
+# ============================================================
+# LLM RELIABLE INSIGHTS
+# ============================================================
+
+llm_insights = []
+
+
+# -------------------- Reliable Posting Time Insight --------------------
+
+reliable_hours = {
+    hour: likes
+    for hour, likes in hourly_likes.items()
+    if len(likes) >= 5
+}
+
+
+if reliable_hours:
+
+    best_hour = max(
+        reliable_hours,
+        key=lambda hour:
+        sum(reliable_hours[hour]) /
+        len(reliable_hours[hour])
+    )
+
+    best_hour_likes = reliable_hours[best_hour]
+
+    best_hour_average = (
+        sum(best_hour_likes) /
+        len(best_hour_likes)
+    )
+
+    llm_insights.append({
+        "type": "posting_time",
+        "insight": (
+            f"{best_hour:02d}:00 has the highest average likes "
+            f"among posting hours with at least 5 analyzed posts."
+        ),
+        "evidence": {
+            "hour": best_hour,
+            "posts": len(best_hour_likes),
+            "average_likes": round(
+                best_hour_average,
+                2
+            )
+        }
+    })
+
+
+# -------------------- Reliable Content Type Insight --------------------
+
+reliable_content_types = {
+    content_type: likes
+    for content_type, likes in content_likes.items()
+    if len(likes) >= 5
+}
+
+
+if "carousel_container" in reliable_content_types and "clips" in reliable_content_types:
+
+    carousel_likes = reliable_content_types["carousel_container"]
+    video_likes = reliable_content_types["clips"]
+
+    carousel_average = (
+        sum(carousel_likes) /
+        len(carousel_likes)
+    )
+
+    video_average = (
+        sum(video_likes) /
+        len(video_likes)
+    )
+
+    if carousel_average > video_average:
+
+        llm_insights.append({
+            "type": "content_type",
+            "insight": (
+                "Carousel posts have a higher average like count "
+                "than clips in the analyzed sample."
+            ),
+            "evidence": {
+                "carousel_posts": len(carousel_likes),
+                "carousel_average_likes": round(
+                    carousel_average,
+                    2
+                ),
+                "clips_posts": len(video_likes),
+                "clips_average_likes": round(
+                    video_average,
+                    2
+                )
+            }
+        })
+
+    elif video_average > carousel_average:
+
+        llm_insights.append({
+            "type": "content_type",
+            "insight": (
+                "Clips have a higher average like count "
+                "than carousel posts in the analyzed sample."
+            ),
+            "evidence": {
+                "carousel_posts": len(carousel_likes),
+                "carousel_average_likes": round(
+                    carousel_average,
+                    2
+                ),
+                "clips_posts": len(video_likes),
+                "clips_average_likes": round(
+                    video_average,
+                    2
+                )
+            }
+        })
+
+
+# -------------------- Reliable Video Insight --------------------
+
+if video_engagement:
+
+    best_video = max(
+        video_engagement,
+        key=lambda item: item[0]
+    )
+
+    best_video_rate = best_video[0]
+    best_video_post = best_video[1]
+
+    llm_insights.append({
+        "type": "video_performance",
+        "insight": (
+            "One analyzed video achieved the highest observed "
+            "video interaction rate in the sample."
+        ),
+        "evidence": {
+            "short_code": best_video_post.get("shortCode"),
+            "interaction_rate": round(
+                best_video_rate,
+                2
+            ),
+            "views": best_video_post.get("videoViewCount"),
+            "likes": best_video_post.get("likesCount"),
+            "comments": best_video_post.get("commentsCount", 0)
+        }
+    })
+
+
+# -------------------- Follower Growth Insight --------------------
+
+if report["growth"].get("status") == "available":
+
+    growth = report["growth"]
+
+    llm_insights.append({
+        "type": "follower_growth",
+        "insight": (
+            "Follower growth can be used to evaluate whether future "
+            "content strategies are associated with account growth, "
+            "but the available data does not establish the cause of growth."
+        ),
+        "evidence": {
+            "start_date": growth["start_date"],
+            "end_date": growth["end_date"],
+            "start_followers": growth["start_followers"],
+            "end_followers": growth["end_followers"],
+            "growth": growth["growth"],
+            "growth_percentage": growth["growth_percentage"],
+            "direction": growth["direction"]
+        }
+    })
+if report["top_posts"]:
+    top_post = report["top_posts"][0]
+
+    llm_insights.append({
+        "type": "top_post",
+        "insight": (
+            "The highest-liked analyzed post received "
+            f"{top_post.get('likes')} likes and "
+            f"{top_post.get('comments')} comments."
+        ),
+        "evidence": {
+            "short_code": top_post.get("short_code"),
+            "likes": top_post.get("likes"),
+            "comments": top_post.get("comments"),
+            "views": top_post.get("views")
+        }
+    })
+
+
+report["llm_insights"] = llm_insights
+
+
+print("\nLLM Reliable Insights:")
+
+for insight in llm_insights:
+
+    print(
+        f"\nType: {insight['type']}"
+    )
+
+    print(
+        f"Insight: {insight['insight']}"
+    )
+
+    print(
+        f"Evidence: {insight['evidence']}"
+    )
 
 
 # -------------------- Growth Suggestions --------------------
@@ -855,7 +1049,6 @@ if video_likes and carousel_likes:
             f"- {suggestion}"
         )
 
-
     elif carousel_avg > video_avg:
 
         suggestion = (
@@ -898,7 +1091,6 @@ if hourly_likes:
             f"occurred at {best_hour:02d}:00."
         )
 
-
         suggestions.append(suggestion)
 
         print(
@@ -910,7 +1102,6 @@ if hourly_likes:
             "Consider testing this posting window with "
             "future posts and comparing the results."
         )
-
 
         suggestions.append(suggestion)
 
@@ -926,7 +1117,6 @@ if hourly_likes:
             "best posting time. At least 5 posts are needed "
             "for a posting-time recommendation."
         )
-
 
         suggestions.append(suggestion)
 
@@ -944,12 +1134,10 @@ if video_engagement:
         key=lambda item: item[0]
     )
 
-
     suggestion = (
         f"The highest observed video interaction rate "
         f"was {best_engagement[0]:.2f}%."
     )
-
 
     suggestions.append(suggestion)
 
@@ -960,6 +1148,8 @@ if video_engagement:
 
 report["suggestions"] = suggestions
 
+
+# -------------------- Logging --------------------
 
 logger.info(
     f"Analytics processing completed for: {profile['username']}"
@@ -980,11 +1170,11 @@ with open(
 ) as f:
 
     json.dump(
-    report,
-    f,
-    indent=4,
-    ensure_ascii=False
-)
+        report,
+        f,
+        indent=4,
+        ensure_ascii=False
+    )
 
 
 print(

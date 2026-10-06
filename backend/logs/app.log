@@ -148,3 +148,40 @@
 2026-10-06 16:20:18,079 - INFO - Analytics processing completed for: karanaujla
 2026-10-06 16:20:19,308 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
 2026-10-06 16:20:19,313 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-10-06 18:16:27,251 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 18:16:38,795 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 18:16:38,797 - INFO - Instagram post scraping started
+2026-10-06 18:17:16,683 - INFO - Instagram posts collected: 50
+2026-10-06 18:17:16,686 - INFO - Instagram profiles collected: 1
+2026-10-06 18:17:16,769 - INFO - Analytics processing started for: karanaujla
+2026-10-06 18:17:33,633 - INFO - Analytics processing completed for: karanaujla
+2026-10-06 18:17:34,918 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-10-06 18:17:34,920 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-10-06 18:19:54,601 - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost()
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost()>
+Traceback (most recent call last):
+  File "C:\Users\dgarg\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dgarg\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-10-06 18:34:56,595 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 18:35:11,499 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 18:35:11,500 - INFO - Instagram post scraping started
+2026-10-06 18:35:50,328 - INFO - Instagram posts collected: 50
+2026-10-06 18:35:50,345 - INFO - Instagram profiles collected: 1
+2026-10-06 18:35:50,439 - INFO - Analytics processing started for: karanaujla
+2026-10-06 18:36:06,642 - INFO - Analytics processing completed for: karanaujla
+2026-10-06 18:36:07,922 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-10-06 18:36:07,925 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-10-06 18:38:13,777 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 18:38:26,222 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 18:38:26,222 - INFO - Instagram post scraping started
+2026-10-06 18:38:58,954 - INFO - Instagram posts collected: 50
+2026-10-06 18:38:58,972 - INFO - Instagram profiles collected: 1
+2026-10-06 18:38:59,087 - INFO - Analytics processing started for: karanaujla
+2026-10-06 18:39:07,004 - INFO - Analytics processing completed for: karanaujla
+2026-10-06 18:39:08,157 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-10-06 18:39:08,159 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.

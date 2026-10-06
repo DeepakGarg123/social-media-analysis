@@ -1,7 +1,7 @@
 {
     "profile": {
         "username": "karanaujla",
-        "followers": 15264923,
+        "followers": 15266411,
         "following": 899,
         "total_posts": 253,
         "verified": true,
@@ -10,21 +10,21 @@
     "supported_recommendations": [
         {
             "type": "video_performance",
-            "action": "Test future videos and compare their interaction rates with the observed 36.25% rate from Dd_oTRvBf0g.",
+            "action": "Test future videos and compare their interaction rates with the observed 36.24% rate from Dd_oTRvBf0g.",
             "evidence": {
                 "short_code": "Dd_oTRvBf0g",
-                "interaction_rate": 36.25
+                "interaction_rate": 36.24
             }
         },
         {
             "type": "top_post",
-            "action": "Use \"Karans Big Day\" as a performance reference when evaluating future posts.",
+            "action": "Use \"New Beginnings Delhi\" as a performance reference when evaluating future posts.",
             "evidence": {
-                "post_name": "Karans Big Day",
-                "likes": 8558678,
-                "comments": 102171
+                "post_name": "New Beginnings Delhi",
+                "likes": 8559223,
+                "comments": 102183
             }
         }
     ],
-    "recommendations": "Recommendation 1:\n\nAction:\n\nTest future videos and compare their interaction rates with the observed 36.25% rate from Dd_oTRvBf0g.\n\nWhy:\n\nThis action is supported because the evidence shows that one analyzed video, Dd_oTRvBf0g, achieved an interaction rate of 36.25%, which is higher than other analyzed videos. By testing future videos and comparing their interaction rates, the account owner can potentially replicate this high interaction rate.\n\nEvidence:\n\n* short_code: \"Dd_oTRvBf0g\"\n* interaction_rate: 36.25"
+    "recommendations": "Recommendation 1:\n\nAction:\n\nTest future videos and compare their interaction rates with the observed 36.24% rate from Dd_oTRvBf0g.\n\nWhy:\n\nThis action is supported because the available evidence shows that one analyzed video achieved the highest observed video interaction rate in the sample, with an interaction rate of 36.24% from Dd_oTRvBf0g.\n\nEvidence:\n\n* \"interaction_rate\": 36.24\n* \"short_code\": \"Dd_oTRvBf0g\"\n* \"views\": 1396712\n* \"likes\": 500410\n* \"comments\": 5785"
 }

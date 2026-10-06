@@ -102,7 +102,7 @@ if st.button("Analyze Profile"):
             with col3:
 
                 following = profile.get(
-                    "followingCount"
+                    "followsCount"
                 )
 
                 if following is not None:

@@ -1,0 +1,30 @@
+{
+    "profile": {
+        "username": "karanaujla",
+        "followers": 15264923,
+        "following": 899,
+        "total_posts": 253,
+        "verified": true,
+        "private": false
+    },
+    "supported_recommendations": [
+        {
+            "type": "video_performance",
+            "action": "Test future videos and compare their interaction rates with the observed 36.25% rate from Dd_oTRvBf0g.",
+            "evidence": {
+                "short_code": "Dd_oTRvBf0g",
+                "interaction_rate": 36.25
+            }
+        },
+        {
+            "type": "top_post",
+            "action": "Use \"Karans Big Day\" as a performance reference when evaluating future posts.",
+            "evidence": {
+                "post_name": "Karans Big Day",
+                "likes": 8558678,
+                "comments": 102171
+            }
+        }
+    ],
+    "recommendations": "Recommendation 1:\n\nAction:\n\nTest future videos and compare their interaction rates with the observed 36.25% rate from Dd_oTRvBf0g.\n\nWhy:\n\nThis action is supported because the evidence shows that one analyzed video, Dd_oTRvBf0g, achieved an interaction rate of 36.25%, which is higher than other analyzed videos. By testing future videos and comparing their interaction rates, the account owner can potentially replicate this high interaction rate.\n\nEvidence:\n\n* short_code: \"Dd_oTRvBf0g\"\n* interaction_rate: 36.25"
+}

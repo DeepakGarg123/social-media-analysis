@@ -68,3 +68,83 @@
 2026-10-05 16:08:08,272 - INFO - Analytics processing completed for: karanaujla
 2026-10-05 16:31:59,449 - INFO - Analytics processing started for: karanaujla
 2026-10-05 16:31:59,474 - INFO - Analytics processing completed for: karanaujla
+2026-10-06 10:06:32,130 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 10:06:51,646 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 10:06:51,646 - INFO - Instagram post scraping started
+2026-10-06 10:07:44,223 - INFO - Instagram posts collected: 50
+2026-10-06 10:07:44,236 - INFO - Follower snapshot saved for karanaujla: 15262624
+2026-10-06 10:07:44,239 - INFO - Instagram profiles collected: 1
+2026-10-06 10:14:07,962 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 10:14:24,870 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 10:14:24,870 - INFO - Instagram post scraping started
+2026-10-06 10:15:12,223 - INFO - Instagram posts collected: 50
+2026-10-06 10:15:12,240 - INFO - Instagram profiles collected: 1
+2026-10-06 10:18:18,048 - INFO - Instagram profile scraping started for: karan_panesar123
+2026-10-06 10:18:48,034 - INFO - Profile karan_panesar123 has 19 posts. Analysis limit set to 19.
+2026-10-06 10:18:48,034 - INFO - Instagram post scraping started
+2026-10-06 10:19:17,947 - INFO - Instagram posts collected: 18
+2026-10-06 10:19:17,949 - INFO - Follower snapshot saved for karan_panesar123: 229
+2026-10-06 10:19:17,952 - INFO - Instagram profiles collected: 1
+2026-10-06 10:19:17,999 - INFO - Analytics processing started for: karan_panesar123
+2026-10-06 10:19:18,022 - INFO - Analytics processing completed for: karan_panesar123
+2026-10-06 12:12:39,329 - INFO - Instagram profile scraping started for: karan_panesar123
+2026-10-06 12:13:05,075 - INFO - Profile karan_panesar123 has 19 posts. Analysis limit set to 19.
+2026-10-06 12:13:05,075 - INFO - Instagram post scraping started
+2026-10-06 12:13:33,317 - INFO - Instagram posts collected: 18
+2026-10-06 12:13:33,334 - INFO - Instagram profiles collected: 1
+2026-10-06 12:13:33,385 - INFO - Analytics processing started for: karan_panesar123
+2026-10-06 12:13:41,031 - INFO - Analytics processing completed for: karan_panesar123
+2026-10-06 15:27:40,417 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 15:28:09,341 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 15:28:09,341 - INFO - Instagram post scraping started
+2026-10-06 15:28:53,842 - INFO - Instagram posts collected: 50
+2026-10-06 15:28:53,857 - INFO - Instagram profiles collected: 1
+2026-10-06 15:28:53,971 - INFO - Analytics processing started for: karanaujla
+2026-10-06 15:29:09,059 - INFO - Analytics processing completed for: karanaujla
+2026-10-06 15:29:09,773 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-10-06 15:29:09,773 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-10-06 15:43:40,742 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 15:43:54,809 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 15:43:54,811 - INFO - Instagram post scraping started
+2026-10-06 15:44:36,541 - INFO - Instagram posts collected: 50
+2026-10-06 15:44:36,551 - INFO - Instagram profiles collected: 1
+2026-10-06 15:53:04,160 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 15:53:19,011 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 15:53:19,012 - INFO - Instagram post scraping started
+2026-10-06 15:53:48,049 - INFO - Instagram posts collected: 50
+2026-10-06 15:53:48,071 - INFO - Instagram profiles collected: 1
+2026-10-06 15:58:58,965 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 15:59:13,247 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 15:59:13,247 - INFO - Instagram post scraping started
+2026-10-06 15:59:52,959 - INFO - Instagram posts collected: 50
+2026-10-06 15:59:52,963 - INFO - Instagram profiles collected: 1
+2026-10-06 16:04:18,431 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 16:04:30,475 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 16:04:30,476 - INFO - Instagram post scraping started
+2026-10-06 16:05:05,708 - INFO - Instagram posts collected: 50
+2026-10-06 16:05:05,713 - INFO - Instagram profiles collected: 1
+2026-10-06 16:08:38,883 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 16:08:56,970 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 16:08:56,973 - INFO - Instagram post scraping started
+2026-10-06 16:09:29,939 - INFO - Instagram posts collected: 50
+2026-10-06 16:09:29,974 - INFO - Instagram profiles collected: 1
+2026-10-06 16:09:30,135 - INFO - Analytics processing started for: karanaujla
+2026-10-06 16:09:46,678 - INFO - Analytics processing completed for: karanaujla
+2026-10-06 16:13:10,036 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 16:13:22,153 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 16:13:22,154 - INFO - Instagram post scraping started
+2026-10-06 16:14:07,219 - INFO - Instagram posts collected: 50
+2026-10-06 16:14:07,238 - INFO - Instagram profiles collected: 1
+2026-10-06 16:14:07,462 - INFO - Analytics processing started for: karanaujla
+2026-10-06 16:14:15,227 - INFO - Analytics processing completed for: karanaujla
+2026-10-06 16:14:16,520 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-10-06 16:14:16,524 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-10-06 16:18:55,520 - INFO - Instagram profile scraping started for: karanaujla
+2026-10-06 16:19:23,862 - INFO - Profile karanaujla has 253 posts. Analysis limit set to 50.
+2026-10-06 16:19:23,863 - INFO - Instagram post scraping started
+2026-10-06 16:20:03,528 - INFO - Instagram posts collected: 50
+2026-10-06 16:20:03,541 - INFO - Instagram profiles collected: 1
+2026-10-06 16:20:03,720 - INFO - Analytics processing started for: karanaujla
+2026-10-06 16:20:18,079 - INFO - Analytics processing completed for: karanaujla
+2026-10-06 16:20:19,308 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-10-06 16:20:19,313 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.

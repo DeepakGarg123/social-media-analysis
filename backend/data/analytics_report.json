@@ -1,50 +1,50 @@
 {
     "profile": {
         "username": "karanaujla",
-        "followers": 15258001,
+        "followers": 15265306,
         "following": 899,
-        "total_posts": 252,
+        "total_posts": 253,
         "verified": true,
         "private": false
     },
     "metrics": {
-        "total_interactions": 52048414,
-        "average_interactions_per_post": 1040968.28,
-        "total_comments": 588759,
-        "average_comments": 11775.18,
-        "total_likes": 51459655,
-        "average_likes": 1029193.1,
-        "total_video_views": 82277411,
-        "average_video_views": 3291096.44
+        "total_interactions": 50693944,
+        "average_interactions_per_post": 1013878.88,
+        "total_comments": 569764,
+        "average_comments": 11395.28,
+        "total_likes": 50124180,
+        "average_likes": 1002483.6,
+        "total_video_views": 84059924,
+        "average_video_views": 3233074.0
     },
     "top_posts": [
         {
             "short_code": "DZh470dtCr5",
-            "title": "Welcome Karan, the stage is ours.\n21st June, Delhi",
+            "post_name": "Karan Takes Stage",
             "caption": "Welcome Karan, the stage is ours.\n21st June, Delhi",
-            "likes": 8556123,
-            "comments": 102059,
+            "likes": 8558819,
+            "comments": 102173,
             "views": null,
             "url": "https://www.instagram.com/p/DZh470dtCr5/",
             "timestamp": "2026-06-13T14:33:38.000Z"
         },
         {
             "short_code": "DaCq1VwMJl4",
-            "title": "ਰਤਾ ਵੀ ਨੀਂ ਟੈਂਨਸ਼ਨਾਂ ਨਜ਼ਾਰੇ ਲੈਨੇ ਆਂ……",
+            "post_name": "Tension Relief",
             "caption": "ਰਤਾ ਵੀ ਨੀਂ ਟੈਂਨਸ਼ਨਾਂ ਨਜ਼ਾਰੇ ਲੈਨੇ ਆਂ……",
-            "likes": 3189356,
-            "comments": 29623,
-            "views": 12981254,
+            "likes": 3190956,
+            "comments": 29632,
+            "views": 12990418,
             "url": "https://www.instagram.com/p/DaCq1VwMJl4/",
             "timestamp": "2026-06-26T08:06:49.000Z"
         },
         {
             "short_code": "DYL6ce_vpCE",
-            "title": "TORONTO YOU HAVE MY HEART ❤️ \n\nNIGHT 2 ✅ \n\nPLEASE WATCH THIS CLIP TO WITNESS THE...",
+            "post_name": "Toronto Nights",
             "caption": "TORONTO YOU HAVE MY HEART ❤️ \n\nNIGHT 2 ✅ \n\nPLEASE WATCH THIS CLIP TO WITNESS THE PRESENCE.",
-            "likes": 2348489,
-            "comments": 15133,
-            "views": 8438702,
+            "likes": 2350349,
+            "comments": 15147,
+            "views": 8445553,
             "url": "https://www.instagram.com/p/DYL6ce_vpCE/",
             "timestamp": "2026-05-11T05:20:58.000Z"
         }
@@ -53,309 +53,316 @@
         {
             "hour": 16,
             "posts": 4,
-            "average_likes": 648873.0
-        },
-        {
-            "hour": 17,
-            "posts": 1,
-            "average_likes": 746607.0
-        },
-        {
-            "hour": 15,
-            "posts": 6,
-            "average_likes": 1110728.8333333333
-        },
-        {
-            "hour": 5,
-            "posts": 4,
-            "average_likes": 1221886.75
-        },
-        {
-            "hour": 11,
-            "posts": 5,
-            "average_likes": 777882.2
-        },
-        {
-            "hour": 13,
-            "posts": 5,
-            "average_likes": 826605.8
-        },
-        {
-            "hour": 23,
-            "posts": 1,
-            "average_likes": 284368.0
+            "average_likes": 663751.5
         },
         {
             "hour": 14,
             "posts": 2,
-            "average_likes": 4917556.0
+            "average_likes": 4919470.5
         },
         {
-            "hour": 8,
-            "posts": 3,
-            "average_likes": 1325615.3333333333
+            "hour": 15,
+            "posts": 6,
+            "average_likes": 849970.6666666666
         },
         {
-            "hour": 1,
-            "posts": 2,
-            "average_likes": 523702.5
+            "hour": 5,
+            "posts": 4,
+            "average_likes": 1226859.75
         },
         {
-            "hour": 2,
-            "posts": 2,
-            "average_likes": 602751.0
+            "hour": 13,
+            "posts": 5,
+            "average_likes": 829056.2
         },
         {
-            "hour": 9,
-            "posts": 3,
-            "average_likes": 1194282.0
+            "hour": 23,
+            "posts": 1,
+            "average_likes": 407942.0
+        },
+        {
+            "hour": 11,
+            "posts": 5,
+            "average_likes": 778419.2
         },
         {
             "hour": 18,
             "posts": 1,
-            "average_likes": 763854.0
+            "average_likes": 763999.0
+        },
+        {
+            "hour": 17,
+            "posts": 1,
+            "average_likes": 746859.0
+        },
+        {
+            "hour": 2,
+            "posts": 2,
+            "average_likes": 602887.5
+        },
+        {
+            "hour": 1,
+            "posts": 2,
+            "average_likes": 523968.0
+        },
+        {
+            "hour": 9,
+            "posts": 3,
+            "average_likes": 1195535.6666666667
+        },
+        {
+            "hour": 8,
+            "posts": 3,
+            "average_likes": 1326298.3333333333
         },
         {
             "hour": 12,
             "posts": 4,
-            "average_likes": 726761.25
+            "average_likes": 726783.5
         },
         {
             "hour": 20,
             "posts": 2,
-            "average_likes": 359865.5
+            "average_likes": 359953.5
         },
         {
             "hour": 4,
             "posts": 1,
-            "average_likes": 395290.0
-        },
-        {
-            "hour": 6,
-            "posts": 1,
-            "average_likes": 571029.0
-        },
-        {
-            "hour": 10,
-            "posts": 2,
-            "average_likes": 1333004.0
+            "average_likes": 395516.0
         },
         {
             "hour": 21,
             "posts": 1,
-            "average_likes": 588160.0
+            "average_likes": 588168.0
+        },
+        {
+            "hour": 10,
+            "posts": 2,
+            "average_likes": 1332925.5
+        },
+        {
+            "hour": 6,
+            "posts": 1,
+            "average_likes": 571004.0
         }
     ],
     "content_analysis": [
         {
             "content_type": "carousel_container",
-            "posts": 24,
-            "average_likes": 884828.0833333334
+            "posts": 23,
+            "average_likes": 847547.0869565217
         },
         {
             "content_type": "clips",
-            "posts": 25,
-            "average_likes": 866706.32
+            "posts": 26,
+            "average_likes": 848914.5384615385
         },
         {
             "content_type": "feed",
             "posts": 1,
-            "average_likes": 8556123.0
+            "average_likes": 8558819.0
         }
     ],
     "video_analysis": [
         {
-            "short_code": "Ddsp26qNJHY",
-            "views": 5477240,
-            "likes": 1471592,
-            "comments": 44368,
-            "interaction_rate": 27.68
-        },
-        {
             "short_code": "DcTnsRUuE_6",
-            "views": 3088190,
-            "likes": 976252,
-            "comments": 13627,
-            "interaction_rate": 32.05
+            "views": 3094560,
+            "likes": 977508,
+            "comments": 13632,
+            "interaction_rate": 32.03
         },
         {
-            "short_code": "Dc--RqNsBap",
-            "views": 3512869,
-            "likes": 892196,
-            "comments": 19765,
-            "interaction_rate": 25.96
+            "short_code": "Ddsp26qNJHY",
+            "views": 5541493,
+            "likes": 1488820,
+            "comments": 44479,
+            "interaction_rate": 27.67
         },
         {
             "short_code": "Dd_oTRvBf0g",
-            "views": 1354104,
-            "likes": 487101,
-            "comments": 5706,
-            "interaction_rate": 36.39
+            "views": 1393573,
+            "likes": 499320,
+            "comments": 5776,
+            "interaction_rate": 36.24
+        },
+        {
+            "short_code": "DeHfvrvhArb",
+            "views": 1175386,
+            "likes": 233760,
+            "comments": 3717,
+            "interaction_rate": 20.2
         },
         {
             "short_code": "DcOm6m1v2sR",
-            "views": 2243597,
-            "likes": 614847,
-            "comments": 6718,
-            "interaction_rate": 27.7
+            "views": 2252377,
+            "likes": 616811,
+            "comments": 6723,
+            "interaction_rate": 27.68
         },
         {
             "short_code": "DeFxMrOv4YX",
-            "views": 827828,
-            "likes": 284368,
-            "comments": 3349,
-            "interaction_rate": 34.76
+            "views": 1245340,
+            "likes": 407942,
+            "comments": 4959,
+            "interaction_rate": 33.16
         },
         {
-            "short_code": "DaCq1VwMJl4",
-            "views": 12981254,
-            "likes": 3189356,
-            "comments": 29623,
-            "interaction_rate": 24.8
-        },
-        {
-            "short_code": "DYL6ce_vpCE",
-            "views": 8438702,
-            "likes": 2348489,
-            "comments": 15133,
-            "interaction_rate": 28.01
-        },
-        {
-            "short_code": "DYQr2OossvO",
-            "views": 1456489,
-            "likes": 471993,
-            "comments": 4217,
-            "interaction_rate": 32.7
-        },
-        {
-            "short_code": "DYJXhtLBOML",
-            "views": 2338517,
-            "likes": 759847,
-            "comments": 4320,
-            "interaction_rate": 32.68
+            "short_code": "Dc--RqNsBap",
+            "views": 3524573,
+            "likes": 894234,
+            "comments": 19768,
+            "interaction_rate": 25.93
         },
         {
             "short_code": "DcL8n2_hPNd",
-            "views": 2427112,
-            "likes": 687944,
-            "comments": 5487,
-            "interaction_rate": 28.57
+            "views": 2444191,
+            "likes": 691735,
+            "comments": 5501,
+            "interaction_rate": 28.53
+        },
+        {
+            "short_code": "DYQr2OossvO",
+            "views": 1457470,
+            "likes": 472293,
+            "comments": 4218,
+            "interaction_rate": 32.69
+        },
+        {
+            "short_code": "DYL6ce_vpCE",
+            "views": 8445553,
+            "likes": 2350349,
+            "comments": 15147,
+            "interaction_rate": 28.01
+        },
+        {
+            "short_code": "DYJXhtLBOML",
+            "views": 2340759,
+            "likes": 760553,
+            "comments": 4325,
+            "interaction_rate": 32.68
+        },
+        {
+            "short_code": "DX3uJ4XP2Km",
+            "views": 1427532,
+            "likes": 466861,
+            "comments": 4340,
+            "interaction_rate": 33.01
         },
         {
             "short_code": "DcBrDA3S1PV",
-            "views": 8155729,
-            "likes": 1603506,
-            "comments": 9171,
+            "views": 8165565,
+            "likes": 1604810,
+            "comments": 9181,
             "interaction_rate": 19.77
         },
         {
-            "short_code": "DZ2LFEvBQg3",
-            "views": 4587526,
-            "likes": 1104345,
-            "comments": 23559,
-            "interaction_rate": 24.59
-        },
-        {
-            "short_code": "DXOGNOajO1r",
-            "views": 1252553,
-            "likes": 307619,
-            "comments": 4327,
-            "interaction_rate": 24.9
-        },
-        {
-            "short_code": "DXwSVPWBuDL",
-            "views": 2958797,
-            "likes": 766027,
-            "comments": 24797,
-            "interaction_rate": 26.73
-        },
-        {
-            "short_code": "DXKL-XADOVW",
-            "views": 3047502,
-            "likes": 866333,
-            "comments": 10376,
-            "interaction_rate": 28.77
-        },
-        {
-            "short_code": "DX6SnGYszhN",
-            "views": 1543676,
-            "likes": 427880,
-            "comments": 3458,
-            "interaction_rate": 27.94
-        },
-        {
-            "short_code": "DYGpGh-sZxw",
-            "views": 1338996,
-            "likes": 395290,
-            "comments": 3607,
-            "interaction_rate": 29.79
-        },
-        {
-            "short_code": "DX8DNZzOQkJ",
-            "views": 2445669,
-            "likes": 575412,
-            "comments": 4242,
-            "interaction_rate": 23.7
+            "short_code": "DaCq1VwMJl4",
+            "views": 12990418,
+            "likes": 3190956,
+            "comments": 29632,
+            "interaction_rate": 24.79
         },
         {
             "short_code": "DXvRH0jsaor",
-            "views": 1841413,
-            "likes": 469570,
+            "views": 1842078,
+            "likes": 469707,
             "comments": 4049,
             "interaction_rate": 25.72
         },
         {
-            "short_code": "DX3uJ4XP2Km",
-            "views": 1426810,
-            "likes": 466635,
-            "comments": 4341,
-            "interaction_rate": 33.01
+            "short_code": "DX6SnGYszhN",
+            "views": 1544689,
+            "likes": 428120,
+            "comments": 3456,
+            "interaction_rate": 27.94
+        },
+        {
+            "short_code": "DXwSVPWBuDL",
+            "views": 2959565,
+            "likes": 766116,
+            "comments": 24794,
+            "interaction_rate": 26.72
         },
         {
             "short_code": "DX_ZYmXM4Q_",
-            "views": 955586,
-            "likes": 320855,
-            "comments": 2721,
+            "views": 956303,
+            "likes": 321078,
+            "comments": 2722,
             "interaction_rate": 33.86
         },
         {
-            "short_code": "DVlU5iXEXLl",
-            "views": 597718,
-            "likes": 119482,
-            "comments": 1428,
-            "interaction_rate": 20.23
+            "short_code": "DXOGNOajO1r",
+            "views": 1252927,
+            "likes": 307717,
+            "comments": 4327,
+            "interaction_rate": 24.91
+        },
+        {
+            "short_code": "DX8DNZzOQkJ",
+            "views": 2447247,
+            "likes": 575643,
+            "comments": 4243,
+            "interaction_rate": 23.7
+        },
+        {
+            "short_code": "DYGpGh-sZxw",
+            "views": 1339638,
+            "likes": 395516,
+            "comments": 3608,
+            "interaction_rate": 29.79
         },
         {
             "short_code": "DWg4oSIE0O9",
-            "views": 2135344,
-            "likes": 744339,
-            "comments": 7455,
-            "interaction_rate": 35.21
+            "views": 2135801,
+            "likes": 744390,
+            "comments": 7456,
+            "interaction_rate": 35.2
         },
         {
             "short_code": "DWjG0UMDpgu",
-            "views": 5844190,
-            "likes": 1316380,
-            "comments": 9371,
+            "views": 5844991,
+            "likes": 1316422,
+            "comments": 9370,
             "interaction_rate": 22.68
+        },
+        {
+            "short_code": "DZ2LFEvBQg3",
+            "views": 4591052,
+            "likes": 1104952,
+            "comments": 23561,
+            "interaction_rate": 24.58
+        },
+        {
+            "short_code": "DXKL-XADOVW",
+            "views": 3049002,
+            "likes": 866626,
+            "comments": 10376,
+            "interaction_rate": 28.76
+        },
+        {
+            "short_code": "DVlU5iXEXLl",
+            "views": 597841,
+            "likes": 119539,
+            "comments": 1428,
+            "interaction_rate": 20.23
         }
     ],
     "growth": {
         "status": "available",
         "start_date": "2026-10-03",
-        "end_date": "2026-10-05",
+        "end_date": "2026-10-06",
         "start_followers": 15242790,
-        "end_followers": 15258001,
-        "growth": 15211,
-        "growth_percentage": 0.1,
+        "end_followers": 15262624,
+        "growth": 19834,
+        "growth_percentage": 0.13,
         "direction": "increase",
         "filter_applied": false
     },
     "suggestions": [
-        "Carousel posts have a higher average like count than video posts in the scraped sample. Consider testing more carousel content.",
+        "Video posts have a higher average like count than carousel posts in the scraped sample. Consider testing more short-form video content.",
         "The highest observed average like count among posting times with at least 5 posts occurred at 15:00.",
         "Consider testing this posting window with future posts and comparing the results.",
-        "The highest observed video interaction rate was 36.39%."
+        "The highest observed video interaction rate was 36.24%."
     ],
     "llm_insights": [
         {
@@ -364,17 +371,17 @@
             "evidence": {
                 "hour": 15,
                 "posts": 6,
-                "average_likes": 1110728.83
+                "average_likes": 849970.67
             }
         },
         {
             "type": "content_type",
-            "insight": "Carousel posts have a higher average like count than clips in the analyzed sample.",
+            "insight": "Clips have a higher average like count than carousel posts in the analyzed sample.",
             "evidence": {
-                "carousel_posts": 24,
-                "carousel_average_likes": 884828.08,
-                "clips_posts": 25,
-                "clips_average_likes": 866706.32
+                "carousel_posts": 23,
+                "carousel_average_likes": 847547.09,
+                "clips_posts": 26,
+                "clips_average_likes": 848914.54
             }
         },
         {
@@ -382,10 +389,10 @@
             "insight": "One analyzed video achieved the highest observed video interaction rate in the sample.",
             "evidence": {
                 "short_code": "Dd_oTRvBf0g",
-                "interaction_rate": 36.39,
-                "views": 1354104,
-                "likes": 487101,
-                "comments": 5706
+                "interaction_rate": 36.24,
+                "views": 1393573,
+                "likes": 499320,
+                "comments": 5776
             }
         },
         {
@@ -393,21 +400,22 @@
             "insight": "Follower growth can be used to evaluate whether future content strategies are associated with account growth, but the available data does not establish the cause of growth.",
             "evidence": {
                 "start_date": "2026-10-03",
-                "end_date": "2026-10-05",
+                "end_date": "2026-10-06",
                 "start_followers": 15242790,
-                "end_followers": 15258001,
-                "growth": 15211,
-                "growth_percentage": 0.1,
+                "end_followers": 15262624,
+                "growth": 19834,
+                "growth_percentage": 0.13,
                 "direction": "increase"
             }
         },
         {
             "type": "top_post",
-            "insight": "The highest-liked analyzed post received 8556123 likes and 102059 comments.",
+            "insight": "The highest-liked analyzed post 'Karan Takes Stage' received 8558819 likes and 102173 comments.",
             "evidence": {
                 "short_code": "DZh470dtCr5",
-                "likes": 8556123,
-                "comments": 102059,
+                "post_name": "Karan Takes Stage",
+                "likes": 8558819,
+                "comments": 102173,
                 "views": null
             }
         }

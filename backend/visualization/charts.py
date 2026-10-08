@@ -1,55 +1,46 @@
-import json
-
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FuncFormatter
 
 
-# --------------------------------------------------
-# LOAD ANALYTICS REPORT
-# --------------------------------------------------
+# ---------------------------------------------------------
+# NUMBER FORMATTER
+# ---------------------------------------------------------
 
-def load_report():
+def format_number(value, position=None):
+    value = float(value)
 
-    with open(
-        "backend/data/analytics_report.json",
-        "r",
-        encoding="utf-8"
-    ) as f:
-
-        return json.load(f)
-
-
-# --------------------------------------------------
-# HELPER FUNCTIONS
-# --------------------------------------------------
-
-def format_content_type(content_type):
-
-    if content_type == "clips":
-        return "Clips"
-
-    if content_type == "carousel_container":
-        return "Carousel"
-
-    if content_type == "feed":
-        return "Feed"
-
-    return content_type.replace("_", " ").title()
-
-
-def format_number(value):
-
-    if value >= 1_000_000:
+    if abs(value) >= 1_000_000:
         return f"{value / 1_000_000:.2f}M"
 
-    if value >= 1_000:
-        return f"{value / 1_000:.0f}K"
+    if abs(value) >= 1_000:
+        return f"{value / 1_000:.1f}K"
 
     return f"{value:.0f}"
 
 
-# --------------------------------------------------
-# 1. CONTENT DISTRIBUTION
-# --------------------------------------------------
+number_formatter = FuncFormatter(format_number)
+
+
+# ---------------------------------------------------------
+# CONTENT TYPE NAME
+# ---------------------------------------------------------
+
+def format_content_type(content_type):
+    mapping = {
+        "carousel_container": "Carousel",
+        "clips": "Reels / Clips",
+        "feed": "Feed"
+    }
+
+    return mapping.get(
+        content_type,
+        str(content_type).replace("_", " ").title()
+    )
+
+
+# ---------------------------------------------------------
+# CONTENT DISTRIBUTION
+# ---------------------------------------------------------
 
 def generate_content_distribution(report):
 
@@ -58,73 +49,42 @@ def generate_content_distribution(report):
         []
     )
 
-    labels = []
-    post_counts = []
+    if not content_analysis:
+        return None
 
-    for item in content_analysis:
-
-        labels.append(
-            format_content_type(
-                item["content_type"]
-            )
+    labels = [
+        format_content_type(
+            item.get("content_type", "Unknown")
         )
+        for item in content_analysis
+    ]
 
-        post_counts.append(
-            item["posts"]
-        )
+    values = [
+        item.get("posts", 0)
+        for item in content_analysis
+    ]
 
-    if not post_counts:
-
-        print(
-            "No content-analysis data available "
-            "for Content Distribution chart."
-        )
-
-        return
-
-    plt.figure(
-        figsize=(9, 7)
+    fig, ax = plt.subplots(
+        figsize=(8, 5)
     )
 
-    plt.pie(
-        post_counts,
+    ax.pie(
+        values,
         labels=labels,
         autopct="%1.1f%%",
-        startangle=90,
-        pctdistance=0.75,
-        labeldistance=1.08,
-        wedgeprops={
-            "edgecolor": "white",
-            "linewidth": 2
-        },
-        textprops={
-            "fontsize": 11
-        }
+        startangle=90
     )
 
-    plt.title(
-        "Content Distribution",
-        fontsize=18,
-        fontweight="bold",
-        pad=20
+    ax.set_title(
+        "Content Distribution"
     )
 
-    plt.axis("equal")
-
-    plt.tight_layout()
-
-    plt.savefig(
-        "backend/visualization/content_distribution.png",
-        dpi=300,
-        bbox_inches="tight"
-    )
-
-    plt.close()
+    return fig
 
 
-# --------------------------------------------------
-# 2. AVERAGE LIKES BY CONTENT TYPE
-# --------------------------------------------------
+# ---------------------------------------------------------
+# AVERAGE LIKES BY CONTENT TYPE
+# ---------------------------------------------------------
 
 def generate_average_likes_chart(report):
 
@@ -133,117 +93,74 @@ def generate_average_likes_chart(report):
         []
     )
 
-    labels = []
-    average_likes = []
+    if not content_analysis:
+        return None
 
-    for item in content_analysis:
-
-        labels.append(
-            format_content_type(
-                item["content_type"]
-            )
+    labels = [
+        format_content_type(
+            item.get("content_type", "Unknown")
         )
+        for item in content_analysis
+    ]
 
-        average_likes.append(
-            item["average_likes"]
-        )
+    values = [
+        item.get("average_likes", 0)
+        for item in content_analysis
+    ]
 
-    if not average_likes:
-
-        print(
-            "No content-analysis data available "
-            "for Average Likes chart."
-        )
-
-        return
-
-    plt.figure(
-        figsize=(10, 6)
+    fig, ax = plt.subplots(
+        figsize=(8, 5)
     )
 
-    bars = plt.barh(
+    bars = ax.bar(
         labels,
-        average_likes,
-        height=0.55
+        values
     )
 
-    plt.title(
-        "Average Likes by Content Type",
-        fontsize=18,
-        fontweight="bold",
-        pad=20
+    ax.set_title(
+        "Average Likes by Content Type"
     )
 
-    plt.xlabel(
-        "Average Likes",
-        fontsize=12
+    ax.set_xlabel(
+        "Content Type"
     )
 
-    plt.ylabel("")
-
-    plt.grid(
-        axis="x",
-        linestyle="--",
-        alpha=0.25
+    ax.set_ylabel(
+        "Average Likes"
     )
 
-    plt.grid(
-        axis="y",
-        visible=False
+    # Format Y-axis as K/M
+    ax.yaxis.set_major_formatter(
+        number_formatter
     )
 
-    plt.gca().spines["top"].set_visible(False)
-    plt.gca().spines["right"].set_visible(False)
-    plt.gca().spines["left"].set_visible(False)
-
-    plt.tick_params(
-        axis="y",
-        length=0,
-        labelsize=12
-    )
-
-    plt.tick_params(
-        axis="x",
-        labelsize=10
-    )
-
-    max_value = max(average_likes)
-
-    if max_value > 0:
-
-        plt.xlim(
-            0,
-            max_value * 1.18
-        )
-
+    # Show exact value above every bar
     for bar, value in zip(
         bars,
-        average_likes
+        values
     ):
 
-        plt.text(
-            value + max_value * 0.015,
-            bar.get_y() + bar.get_height() / 2,
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            bar.get_height(),
             format_number(value),
-            va="center",
-            fontsize=11,
-            fontweight="bold"
+            ha="center",
+            va="bottom",
+            fontsize=10
         )
+
+    plt.xticks(
+        rotation=20
+    )
 
     plt.tight_layout()
 
-    plt.savefig(
-        "backend/visualization/average_likes_content_type.png",
-        dpi=300,
-        bbox_inches="tight"
-    )
-
-    plt.close()
+    return fig
 
 
-# --------------------------------------------------
-# 3. POSTING TIME PERFORMANCE
-# --------------------------------------------------
+# ---------------------------------------------------------
+# POSTING TIME PERFORMANCE
+# ---------------------------------------------------------
 
 def generate_posting_time_chart(report):
 
@@ -253,137 +170,84 @@ def generate_posting_time_chart(report):
     )
 
     if not posting_analysis:
+        return None
 
-        print(
-            "No posting-time data available."
-        )
-
-        return
-
+    # Sort by hour so chart is chronological
     posting_analysis = sorted(
         posting_analysis,
-        key=lambda item: item["hour"]
+        key=lambda item: item.get("hour", 0)
     )
 
-    posting_times = []
-    posting_average_likes = []
-    posting_counts = []
+    hours = [
+        item.get("hour", 0)
+        for item in posting_analysis
+    ]
 
-    for item in posting_analysis:
+    average_likes = [
+        item.get("average_likes", 0)
+        for item in posting_analysis
+    ]
 
-        posting_times.append(
-            f"{item['hour']:02d}:00"
-        )
+    # Convert hour to readable time
+    time_labels = [
+        f"{hour:02d}:00"
+        for hour in hours
+    ]
 
-        posting_average_likes.append(
-            item["average_likes"]
-        )
-
-        posting_counts.append(
-            item["posts"]
-        )
-
-    if not posting_average_likes:
-
-        print(
-            "No posting-time performance data available."
-        )
-
-        return
-
-    plt.figure(
-        figsize=(10, 6)
+    fig, ax = plt.subplots(
+        figsize=(10, 5)
     )
 
-    bars = plt.barh(
-        posting_times,
-        posting_average_likes,
-        height=0.55
+    bars = ax.bar(
+        time_labels,
+        average_likes
     )
 
-    plt.title(
-        "Observed Posting Time Performance",
-        fontsize=18,
-        fontweight="bold",
-        pad=20
+    ax.set_title(
+        "Posting Time Performance"
     )
 
-    plt.xlabel(
-        "Average Likes",
-        fontsize=12
+    ax.set_xlabel(
+        "Posting Time"
     )
 
-    plt.ylabel(
-        "Posting Time",
-        fontsize=12
+    ax.set_ylabel(
+        "Average Likes"
     )
 
-    plt.grid(
-        axis="x",
-        linestyle="--",
-        alpha=0.25
+    # Format Y-axis as K/M
+    ax.yaxis.set_major_formatter(
+        number_formatter
     )
 
-    plt.grid(
-        axis="y",
-        visible=False
-    )
-
-    plt.gca().spines["top"].set_visible(False)
-    plt.gca().spines["right"].set_visible(False)
-    plt.gca().spines["left"].set_visible(False)
-
-    plt.tick_params(
-        axis="y",
-        length=0,
-        labelsize=11
-    )
-
-    plt.tick_params(
-        axis="x",
-        labelsize=10
-    )
-
-    max_value = max(
-        posting_average_likes
-    )
-
-    if max_value > 0:
-
-        plt.xlim(
-            0,
-            max_value * 1.20
-        )
-
-    for bar, value, count in zip(
+    # Show exact average likes above every bar
+    for bar, value in zip(
         bars,
-        posting_average_likes,
-        posting_counts
+        average_likes
     ):
 
-        plt.text(
-            value + max_value * 0.015,
-            bar.get_y() + bar.get_height() / 2,
-            f"{format_number(value)} ({count} posts)",
-            va="center",
-            fontsize=10,
-            fontweight="bold"
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            bar.get_height(),
+            format_number(value),
+            ha="center",
+            va="bottom",
+            fontsize=9
         )
+
+    plt.xticks(
+        rotation=45,
+        ha="right"
+    )
 
     plt.tight_layout()
 
-    plt.savefig(
-        "backend/visualization/posting_time_performance.png",
-        dpi=300,
-        bbox_inches="tight"
-    )
-
-    plt.close()
+    return fig
 
 
-# --------------------------------------------------
-# 4. TOP 3 PERFORMING POSTS
-# --------------------------------------------------
+# ---------------------------------------------------------
+# TOP 3 POSTS
+# ---------------------------------------------------------
 
 def generate_top_posts_chart(report):
 
@@ -392,193 +256,94 @@ def generate_top_posts_chart(report):
         []
     )
 
-    post_labels = []
-    post_likes = []
+    if not top_posts:
+        return None
 
-    for post in top_posts:
+    top_posts = top_posts[:3]
 
-        post_name = post.get(
-            "post_name"
+    names = [
+        (
+            post.get("post_name")
+            or "Instagram Post"
         )
+        for post in top_posts
+    ]
 
-        if post_name:
-
-            post_labels.append(
-                post_name
-            )
-
-        else:
-
-            post_labels.append(
-                post.get(
-                    "short_code",
-                    "Unknown Post"
-                )
-            )
-
-        likes = post.get(
-            "likes"
+    likes = [
+        post.get(
+            "likes",
+            0
         )
+        for post in top_posts
+    ]
 
-        if likes is None:
-            likes = 0
-
-        post_likes.append(
-            likes
-        )
-
-    if not post_likes:
-
-        print(
-            "No top-post data available "
-            "for Top 3 Performing Posts chart."
-        )
-
-        return
-
-    plt.figure(
-        figsize=(10, 6)
+    fig, ax = plt.subplots(
+        figsize=(10, 5)
     )
 
-    bars = plt.bar(
-        post_labels,
-        post_likes,
-        width=0.55
+    bars = ax.bar(
+        names,
+        likes
     )
 
-    plt.title(
-        "Top 3 Performing Posts",
-        fontsize=18,
-        fontweight="bold",
-        pad=20
+    ax.set_title(
+        "Top 3 Posts by Likes"
     )
 
-    plt.xlabel(
-        "Post",
-        fontsize=12
+    ax.set_xlabel(
+        "Post"
     )
 
-    plt.ylabel(
-        "Likes",
-        fontsize=12
+    ax.set_ylabel(
+        "Likes"
     )
 
-    plt.grid(
-        axis="y",
-        linestyle="--",
-        alpha=0.25
+    # Format Y-axis as K/M
+    ax.yaxis.set_major_formatter(
+        number_formatter
     )
 
-    plt.grid(
-        axis="x",
-        visible=False
-    )
-
-    plt.gca().spines["top"].set_visible(False)
-    plt.gca().spines["right"].set_visible(False)
-    plt.gca().spines["left"].set_visible(False)
-
-    plt.tick_params(
-        axis="x",
-        length=0,
-        labelsize=11
-    )
-
-    plt.tick_params(
-        axis="y",
-        labelsize=10
-    )
-
-    max_value = max(
-        post_likes
-    )
-
-    if max_value > 0:
-
-        plt.ylim(
-            0,
-            max_value * 1.18
-        )
-
+    # Show exact likes above every post
     for bar, value in zip(
         bars,
-        post_likes
+        likes
     ):
 
-        plt.text(
+        ax.text(
             bar.get_x() + bar.get_width() / 2,
-            value + max_value * 0.025,
+            bar.get_height(),
             format_number(value),
             ha="center",
             va="bottom",
-            fontsize=11,
-            fontweight="bold"
+            fontsize=10
         )
+
+    plt.xticks(
+        rotation=20,
+        ha="right"
+    )
 
     plt.tight_layout()
 
-    plt.savefig(
-        "backend/visualization/top_3_posts.png",
-        dpi=300,
-        bbox_inches="tight"
-    )
-
-    plt.close()
+    return fig
 
 
-# --------------------------------------------------
+# ---------------------------------------------------------
 # GENERATE ALL CHARTS
-# --------------------------------------------------
+# ---------------------------------------------------------
 
-def generate_charts():
+def generate_charts(report):
 
-    print(
-        "\nGenerating charts..."
-    )
+    return {
+        "content_distribution":
+            generate_content_distribution(report),
 
-    report = load_report()
+        "average_likes":
+            generate_average_likes_chart(report),
 
-    generate_content_distribution(
-        report
-    )
+        "posting_time":
+            generate_posting_time_chart(report),
 
-    print(
-        "Content distribution chart generated."
-    )
-
-    generate_average_likes_chart(
-        report
-    )
-
-    print(
-        "Average likes chart generated."
-    )
-
-    generate_posting_time_chart(
-        report
-    )
-
-    print(
-        "Posting time chart generated."
-    )
-
-    generate_top_posts_chart(
-        report
-    )
-
-    print(
-        "Top posts chart generated."
-    )
-
-    print(
-        "All charts generated successfully."
-    )
-
-
-# --------------------------------------------------
-# DIRECT EXECUTION
-# --------------------------------------------------
-
-if __name__ == "__main__":
-
-    generate_charts()
+        "top_posts":
+            generate_top_posts_chart(report)
+    }

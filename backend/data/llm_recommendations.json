@@ -1,7 +1,7 @@
 {
     "profile": {
         "username": "karanaujla",
-        "followers": 15266411,
+        "followers": 15274610,
         "following": 899,
         "total_posts": 253,
         "verified": true,
@@ -10,21 +10,21 @@
     "supported_recommendations": [
         {
             "type": "video_performance",
-            "action": "Test future videos and compare their interaction rates with the observed 36.24% rate from Dd_oTRvBf0g.",
+            "action": "Test future videos and compare their interaction rates with the observed 36.12% rate from Dd_oTRvBf0g.",
             "evidence": {
                 "short_code": "Dd_oTRvBf0g",
-                "interaction_rate": 36.24
+                "interaction_rate": 36.12
             }
         },
         {
             "type": "top_post",
-            "action": "Use \"New Beginnings Delhi\" as a performance reference when evaluating future posts.",
+            "action": "Use \"Welcome to the Stage\" as a performance reference when evaluating future posts.",
             "evidence": {
-                "post_name": "New Beginnings Delhi",
-                "likes": 8559223,
-                "comments": 102183
+                "post_name": "Welcome to the Stage",
+                "likes": 8569698,
+                "comments": 102457
             }
         }
     ],
-    "recommendations": "Recommendation 1:\n\nAction:\n\nTest future videos and compare their interaction rates with the observed 36.24% rate from Dd_oTRvBf0g.\n\nWhy:\n\nThis action is supported because the available evidence shows that one analyzed video achieved the highest observed video interaction rate in the sample, with an interaction rate of 36.24% from Dd_oTRvBf0g.\n\nEvidence:\n\n* \"interaction_rate\": 36.24\n* \"short_code\": \"Dd_oTRvBf0g\"\n* \"views\": 1396712\n* \"likes\": 500410\n* \"comments\": 5785"
+    "recommendations": "Recommendation 1:\n\nWhat to do:\nFor your upcoming video uploads, try testing different presentation styles or clip lengths, and compare their interaction rates against the 36.12% rate achieved by one of your top-performing videos.\n\nWhy this makes sense:\nThis specific video stood out by converting views into active engagement at an exceptionally high rate. Using its 36.12% interaction rate as a reference point will help you evaluate whether your new video concepts are hitting the mark and capturing your audience's attention as effectively.\n\nWhat to monitor:\nKeep an eye on the views, likes, and comments on your future videos. Calculate their interaction rates (total likes and comments divided by views) and see whether they approach, meet, or exceed this 36.12% reference point.\n\nEvidence:\nAn analyzed video in your sample achieved a 36.12% interaction rate, generating 514,675 likes and 5,857 comments from 1,441,155 views.\n\nRecommendation 2:\n\nWhat to do:\nUse your highly successful post, \"Welcome to the Stage,\" as a major reference point when evaluating how your audience responds to future announcement-style posts or milestone content.\n\nWhy this makes sense:\n\"Welcome to the Stage\" achieved an extraordinary level of community response. Having this post as a point of comparison helps you understand the peak engagement potential of your current audience and gives you a clear target to keep in mind when launching future big updates.\n\nWhat to monitor:\nWhen you post your next major announcements, compare their total likes and comments directly against the engagement of \"Welcome to the Stage\" to see how close they get to matching that level of excitement.\n\nEvidence:\nThe post \"Welcome to the Stage\" received 8,569,698 likes and 102,457 comments."
 }
